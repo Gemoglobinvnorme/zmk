@@ -25,6 +25,7 @@
 #include <behaviors/key_repeat.dtsi>
 #include <behaviors/backlight.dtsi>
 #include <behaviors/macros.dtsi>
+#include <behaviors/dynamic_macro.dtsi>
 #include <behaviors/soft_off.dtsi>
 #include <behaviors/studio_unlock.dtsi>
 #include <behaviors/mouse_keys.dtsi>
