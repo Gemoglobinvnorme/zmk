@@ -1,0 +1,10 @@
+file_format: "1"
+id: my_dactyl_keyboard
+name: my_dactyl_keyboard
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - my_dactyl_keyboard_left
+  - my_dactyl_keyboard_right
