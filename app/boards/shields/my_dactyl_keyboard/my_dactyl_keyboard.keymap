@@ -18,18 +18,20 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
-#define BASE           0
-#define PUBG           1
-#define SHOOTER        2
-#define TV_LAYER       3
-#define LOWER          4
-#define RAISE          5
-#define MAIN_LOWER     6
-#define MAIN_RAISE     7
-#define PUBG_LOWER     8
-#define SHOOTER_LOWER  9
-#define TV_LOWER_LAYER 10
-#define ADJUST         11
+#define BASE               0
+#define BASE_SHOOTER       1
+#define PUBG               2
+#define SHOOTER            3
+#define TV_LAYER           4
+#define LOWER              5
+#define RAISE              6
+#define BASE_SHOOTER_LOWER 7
+#define SHOOTER_LOWER      8
+#define MAIN_LOWER         9
+#define MAIN_RAISE         10
+#define PUBG_LOWER         11
+#define TV_LOWER_LAYER     13
+#define ADJUST             14
 
 / {
     conditional_layers {
@@ -57,6 +59,18 @@
         raise_layer {
             if-layers = <MAIN_RAISE>;
             then-layer = <RAISE>;
+        };
+        pubg_layer {
+            if-layers = <PUBG>;
+            then-layer = <BASE_SHOOTER>;
+        };
+        shooter_layer {
+            if-layers = <SHOOTER>;
+            then-layer = <BASE_SHOOTER>;
+        };
+        shooter_lower_layer {
+            if-layers = <SHOOTER_LOWER>;
+            then-layer = <BASE_SHOOTER_LOWER>;
         };
     };
 
@@ -119,14 +133,28 @@
         default_layer {
             bindings = <
 &kp ESC   &kp F1   &kp F2         &kp F3     &kp F4  &kp F5                &kp F6 &kp F7 &kp F8    &kp F9         &kp F10    &kp F11
-&kp ESC   &kp N1   &kp N2         &kp N3     &kp N4  &kp N5                &kp N6 &kp N7 &kp N8    &kp N9         &kp N0    &kp RBKT
+&kp GRAVE   &kp N1   &kp N2         &kp N3     &kp N4  &kp N5                &kp N6 &kp N7 &kp N8    &kp N9         &kp N0    &kp RBKT
 &kp TAB   &kp Q    &kp W          &kp E      &kp R   &kp T                 &kp Y  &kp U  &kp I     &kp O          &kp P     &kp LBKT
 &kp LSHFT &kp A    &kp S          &kp D      &kp F   &kp G                 &kp H  &kp J  &kp K     &kp L          &kp SEMI  &kp SQT
 &kp LCTRL &kp Z    &kp X          &kp C      &kp V   &kp B                 &kp N  &kp M  &kp COMMA &kp DOT        &kp FSLH  &kp BSLH
-                   &lang_ch LANG_EN LC(LS(N1)) &lang_ch LANG_RU LC(LS(N0))                                         &kp EQUAL &kp GT
+                   &lang_ch LANG_EN LC(LS(N1)) &lang_ch LANG_RU LC(LS(N0))               &kp EQUAL &kp GT
                    &mo MAIN_LOWER &kp SPACE                                              &kp BSPC  &mo MAIN_RAISE
                    &kp LGUI       &kp DEL                                                &kp RET   &kp MINUS
                    &kp LALT       &kp LC(Y)                                              &kp F12   &kp INS
+            >;
+        };
+
+        base_shooter_layer {
+            bindings = <
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&kp T &kp TAB &kp Q &kp W &kp E &kp R         &trans &trans &trans &trans &trans &trans
+&kp G &kp LSHFT &kp A &kp S &kp D &kp F         &trans &trans &trans &trans &trans &trans
+&kp B &kp LCTRL &kp Z &kp X &kp C &kp V         &trans &trans &trans &trans &trans &trans
+              &kp BSPC &kp RET                                     &trans &trans
+              &mo SHOOTER_LOWER &trans                                     &trans &trans
+              &kp HOME &trans                                     &trans &trans
+              &trans &kp END                                     &trans &trans
             >;
         };
 
@@ -134,13 +162,13 @@
             bindings = <
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &kt_on BSLH &trans         &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
+              &kp PG_DN &kp K                                     &trans &trans
+              &mo PUBG_LOWER &kp KP_MINUS                                     &trans &trans
+              &kp KP_PLUS &kp SPACE                                     &trans &trans
+              &kp EQUAL &kp LALT                                     &trans &trans
             >;
         };
 
@@ -193,8 +221,36 @@
 &kp CAPS &kp PSCRN &trans &trans &trans &trans    &trans &kp HOME  &kp UP   &kp END   &trans &trans
 &trans &kp C_AL_CALC &trans &trans &trans &trans  &kp PG_UP &kp LEFT  &kp DOWN &kp RIGHT &trans &trans
 &trans &trans &trans &trans &trans &trans         &kp PG_DN &kp K_VOLUME_DOWN &kp K_VOLUME_UP &trans &trans &trans
-              &trans &trans                                     &trans &kp F24
+              &trans &trans                                     &lang_ch LANG_RU LC(LS(N0)) &lang_ch LANG_EN LC(LS(N1))
               &mo MAIN_LOWER &trans                             &trans &trans
+              &trans &trans                                     &trans &trans
+              &trans &trans                                     &kp F24 &trans
+            >;
+        };
+
+        base_shooter_lower_layer {
+            bindings = <
+&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11         &trans &trans &trans &trans &trans &trans
+&kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp RBKT         &trans &trans &trans &trans &trans &trans
+&kp Y &kp U &kp I &kp O &kp P &kp LBKT              &trans &trans &trans &trans &trans &trans
+&kp H &kp J &kp K &kp L &kp SEMI &kp SQT            &trans &trans &trans &trans &trans &trans
+&kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp BSLH     &trans &trans &trans &trans &trans &trans
+              &kp PG_DN &kp PG_UP                                     &trans &trans
+              &trans &kp KP_MINUS                                     &trans &trans
+              &kp MINUS &kp KP_PLUS                                     &trans &trans
+              &kp INS &kp F12                                     &trans &trans
+            >;
+        };
+
+        shooter_lower_layer {
+            bindings = <
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+              &trans &trans                                     &trans &trans
+              &trans &trans                                     &trans &trans
               &trans &trans                                     &trans &trans
               &trans &trans                                     &trans &trans
             >;
@@ -230,28 +286,14 @@
 
         pubg_lower_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
-            >;
-        };
-
-        shooter_lower_layer {
-            bindings = <
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
-              &trans &trans                                     &trans &trans
+&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F12         &trans &trans &trans &trans &trans &trans
+&kp MINUS &kp N6 &kp N7 &kp N8 &kp N9 &kp N0         &trans &trans &trans &trans &trans &trans
+&kp P &kp DEL &kp Y &trans &kp I &kp O         &trans &trans &trans &trans &trans &trans
+&kp U &trans &trans &trans &trans &kp L         &trans &trans &trans &trans &trans &trans
+&kp INS &trans &kp N &kp M &kp END &kp PG_UP         &trans &trans &trans &trans &trans &trans
+              &kp J &kp H                                     &trans &trans
+              &trans &kp KP_DIVIDE                                     &trans &trans
+              &trans &kp HOME                                     &trans &trans
               &trans &trans                                     &trans &trans
             >;
         };
@@ -276,7 +318,7 @@
 &none &none &none &none &none &none                        &none &none &none &none &none &none
 &none &none &none &none &none &none                        &none &none &none &none &none &none
 &none &none &none &none &none &none                        &none &none &none &none &none &none
-&none &none &none &none &none &none                        &none &none &none &none &none &none
+&none &none &none &none &none &none                        &none &none &none &none &none &bt BT_CLR
               &none &none                                                    &none &none
               &none &none                                                    &none &none
               &none &none                                                    &none &none
