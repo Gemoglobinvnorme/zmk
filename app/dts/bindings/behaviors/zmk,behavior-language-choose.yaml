@@ -1,0 +1,8 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: Language choose
+
+compatible: "zmk,behavior-language-choose"
+
+include: two_param.yaml

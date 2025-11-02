@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/behaviors.h>
+
+/ {
+    behaviors {
+#if ZMK_BEHAVIOR_OMIT(DM)
+        /omit-if-no-ref/
+#endif
+        // Name must be at most 8 characters long
+        lang_kp: lang_kp {
+            compatible = "zmk,behavior-language-key-press";
+            #binding-cells = <2>;
+            display-name = "Language key press";
+        };
+    };
+};

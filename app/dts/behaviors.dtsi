@@ -29,3 +29,5 @@
 #include <behaviors/soft_off.dtsi>
 #include <behaviors/studio_unlock.dtsi>
 #include <behaviors/mouse_keys.dtsi>
+#include <behaviors/language_choose.dtsi>
+#include <behaviors/language_key_press.dtsi>
