@@ -19,6 +19,11 @@ static int lkp_press(struct zmk_behavior_binding *binding, struct zmk_behavior_b
     uint32_t keycode = binding->param1;
     LOG_DBG("DM press: keycode=%d", keycode);
 
+    uint8_t layer = zmk_keymap_highest_layer_active();
+    bool is_active = zmk_keymap_layer_active(5);
+    LOG_DBG("layer - %d", layer);
+    LOG_DBG("is_active = %s", is_active ? "true" : "false");
+
     if (global_language == LANG_RU) {
         keycode = keycode_ru;
     }
