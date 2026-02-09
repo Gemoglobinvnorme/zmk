@@ -36,7 +36,9 @@
 #define PUBG_LOWER         14
 #define TV_LOWER_LAYER     15
 #define ANDROID_LOWER      16
-#define ADJUST             17
+#define LOWER_DCS          17
+#define RAISE_DCS          18
+#define ADJUST             19
 
 / {
     conditional_layers {
@@ -56,6 +58,14 @@
         lower_tv_layer {
             if-layers = <TV_LOWER_LAYER>;
             then-layer = <LOWER>;
+        };
+        lower_dcs_layer {
+            if-layers = <MAIN_LOWER>;
+            then-layer = <LOWER_DCS>;
+        };
+        raise_dcs_layer {
+            if-layers = <MAIN_RAISE>;
+            then-layer = <RAISE_DCS>;
         };
         lower_layer {
             if-layers = <MAIN_LOWER>;
