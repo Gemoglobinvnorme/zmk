@@ -23,19 +23,20 @@
 #define BASE_SHOOTER       1
 #define PUBG               2
 #define CS2                3
-#define SHOOTER            4
-#define TV_LAYER           5
-#define ANDROID            6
-#define LOWER              7
-#define RAISE              8
-#define BASE_SHOOTER_LOWER 9
-#define SHOOTER_LOWER      10
-#define MAIN_LOWER         11
-#define MAIN_RAISE         12
-#define PUBG_LOWER         13
-#define TV_LOWER_LAYER     14
-#define ANDROID_LOWER      15
-#define ADJUST             16
+#define DCS                4
+#define SHOOTER            5
+#define TV_LAYER           6
+#define ANDROID            7
+#define LOWER              8
+#define RAISE              9
+#define BASE_SHOOTER_LOWER 10
+#define SHOOTER_LOWER      11
+#define MAIN_LOWER         12
+#define MAIN_RAISE         13
+#define PUBG_LOWER         14
+#define TV_LOWER_LAYER     15
+#define ANDROID_LOWER      16
+#define ADJUST             17
 
 / {
     conditional_layers {
@@ -229,6 +230,20 @@
             >;
         };
 
+        dcs_layer {
+            bindings = <
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RSHFT
+&trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RCTRL
+              &trans &trans                                     &trans &trans
+              &trans &trans                                     &trans &trans
+              &trans &trans                                     &trans &kp RGUI
+              &trans &trans                                     &trans &kp RALT
+            >;
+        };
+
         shooter_layer {
             bindings = <
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
@@ -394,6 +409,34 @@
               &trans &trans                                           &trans &trans
               &trans &trans                                           &trans &trans
               &trans &trans                                           &trans &trans
+            >;
+        };
+
+        dcs_lower_layer {
+            bindings = <
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp SQT
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp BSLH
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp KP_COMMA &kp RSHFT
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp KP_ENTER &kp RCTRL
+              &trans &trans                                           &trans &trans
+              &trans &trans                                           &trans &trans
+              &trans &trans                                           &trans &kp RGUI
+              &trans &trans                                           &trans &kp RALT
+            >;
+        };
+
+        dcs_raise_layer {
+            bindings = <
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp RSHFT
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp RCTRL
+              &trans &trans                                           &trans &trans
+              &trans &trans                                           &trans &trans
+              &trans &trans                                           &trans &kp RGUI
+              &trans &trans                                           &trans &kp RALT
             >;
         };
 
