@@ -60,12 +60,12 @@
             then-layer = <LOWER>;
         };
         lower_dcs_layer {
-            if-layers = <MAIN_LOWER>;
-            then-layer = <LOWER_DCS>;
+            if-layers = <LOWER_DCS>;
+            then-layer = <LOWER>;
         };
         raise_dcs_layer {
-            if-layers = <MAIN_RAISE>;
-            then-layer = <RAISE_DCS>;
+            if-layers = <RAISE_DCS>;
+            then-layer = <RAISE>;
         };
         lower_layer {
             if-layers = <MAIN_LOWER>;
