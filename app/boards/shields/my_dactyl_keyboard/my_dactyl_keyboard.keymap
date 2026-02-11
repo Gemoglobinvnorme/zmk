@@ -98,6 +98,10 @@
     };
 
     behaviors {
+        hidiokp: hid_io_key_press {
+          compatible = "zmk,behavior-hid-io-key-press";
+          #binding-cells = <1>;
+        };
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -298,7 +302,7 @@
 
         base_lower_layer {
             bindings = <
-&trans &trans &trans &trans &volume_down &volume_up                        &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &volume_down &volume_up                        &hidiokp 1 &hidiokp 31 &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans                                            &trans &kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &trans
 &trans &trans &trans &mmv MOVE_UP &trans &trans                                 &trans &kp KP_N7  &kp KP_N8 &kp KP_N9 &kp KP_PLUS &trans
 &trans &mkp MB2 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP           &trans &kp KP_N4  &kp KP_N5 &kp KP_N6 &kp KP_EQUAL &kp KP_COMMA
