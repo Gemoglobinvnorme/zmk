@@ -1,0 +1,11 @@
+file_format: "1"
+id: my_full_keyboard
+name: my_full_keyboard
+type: shield
+url: https://github.com/josefadamcik/SofleKeyboard
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - my_full_keyboard_left
+  - my_full_keyboard_right
