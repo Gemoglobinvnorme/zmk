@@ -316,11 +316,11 @@
 
         base_raise_layer {
             bindings = <
-&trans &kp F13 &kp F14 &kp F15 &kp F16 &kp F17         &kp F18 &kp F19 &kp F20 &kp F21 &kp F22 &kp F23
-&trans &trans &trans &trans &trans &trans              &kp PAUSE_BREAK &trans &trans &trans &trans &trans
-&kp CAPS &kp PSCRN &trans &trans &trans &trans         &kp SCROLLLOCK &kp HOME  &kp UP   &kp END   &trans &trans
-&trans &kp C_AL_CALC &trans &trans &trans &trans       &kp PG_UP &kp LEFT  &kp DOWN &kp RIGHT &trans &dm DM_STP 0
-&trans &kp K_CMENU &trans &trans &trans &trans         &kp PG_DN &volume_down &volume_up &trans &dm DM_PLY 0 &dm DM_REC 0
+&trans &kp F13 &kp F14 &kp F15 &kp F16 &kp F17         &kp F18         &kp F19          &kp F20    &kp F21   &kp F22      &kp F23
+&trans &trans &trans &trans &trans &trans              &kp PAUSE_BREAK &trans           &trans     &trans    &trans       &trans
+&kp CAPS &kp PSCRN &trans &trans &trans &trans         &kp SCROLLLOCK  &kp HOME         &kp UP     &kp END   &trans       &trans
+&trans &kp C_AL_CALC &trans &trans &trans &trans       &kp PG_UP       &kp LEFT         &kp DOWN   &kp RIGHT &trans       &dm DM_STP 0
+&trans &kp K_CMENU &trans &trans &trans &trans         &kp PG_DN       &volume_down     &volume_up &trans    &dm DM_PLY 0 &dm DM_REC 0
               &trans &trans                                     &lang_ch LANG_RU LC(LS(N0)) &lang_ch LANG_EN LC(LS(N1))
               &trans &trans                                     &trans &trans
               &trans &trans                                     &trans &trans
@@ -442,11 +442,11 @@
 
         dcs_raise_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans               &trans &kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &trans &trans
-&trans &trans &trans &trans &trans &trans               &trans &kp KP_N7  &kp KP_N8     &kp KP_N9       &trans &trans
-&trans &trans &trans &trans &trans &trans               &trans &kp KP_N4  &kp KP_N5     &kp KP_N6       &kp KP_COMMA &kp RSHFT
-&trans &trans &trans &trans &trans &trans               &trans &kp KP_N1  &kp KP_N2     &kp KP_N3       &kp KP_ENTER &kp RCTRL
+&trans &trans &trans &trans &trans &trans                   &trans &trans     &trans        &trans          &trans &trans
+&trans &trans &trans &trans &trans &trans                   &trans &kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &trans &trans
+&trans &trans &kp HOME         &kp UP     &kp END   &trans  &trans &kp KP_N7  &kp KP_N8     &kp KP_N9       &trans &trans
+&trans &trans &kp LEFT         &kp DOWN   &kp RIGHT &trans  &trans &kp KP_N4  &kp KP_N5     &kp KP_N6       &kp KP_COMMA &kp RSHFT
+&trans &trans &trans &trans &trans &trans                   &trans &kp KP_N1  &kp KP_N2     &kp KP_N3       &kp KP_ENTER &kp RCTRL
               &hidiokp 5 &hidiokp 6                                   &kp KP_N0 &kp KP_DOT
               &trans &trans                                           &trans &trans
               &trans &trans                                           &trans &kp RGUI
