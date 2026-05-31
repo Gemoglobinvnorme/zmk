@@ -252,7 +252,7 @@
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RSHFT
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RCTRL
               &kp MINUS &kp INS                                 &trans &kp SQT
-              &mo LOWER_DCS &trans                              &mo RAISE_DCS &trans
+              &mo LOWER_DCS &trans                              &trans &mo RAISE_DCS
               &trans &trans                                     &trans &kp RGUI
               &trans &kp BSLH                                   &trans &kp RALT
             >;
@@ -433,7 +433,7 @@
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp KP_COMMA &kp RSHFT
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp KP_ENTER &kp RCTRL
-              &trans &trans                                           &trans &trans
+              &hidiokp 1 &hidiokp 2                                   &hidiokp 3 &hidiokp 4
               &trans &trans                                           &trans &trans
               &trans &trans                                           &trans &kp RGUI
               &trans &trans                                           &trans &kp RALT
@@ -447,7 +447,7 @@
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp RSHFT
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp RCTRL
-              &trans &trans                                           &trans &trans
+              &hidiokp 5 &hidiokp 6                                   &hidiokp 7 &hidiokp 8
               &trans &trans                                           &trans &trans
               &trans &trans                                           &trans &kp RGUI
               &trans &trans                                           &trans &kp RALT
