@@ -252,7 +252,7 @@
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RSHFT
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RCTRL
               &kp MINUS &kp INS                                 &trans &kp SQT
-              &trans &trans                                     &trans &trans
+              &mo LOWER_DCS &trans                              &mo RAISE_DCS &trans
               &trans &trans                                     &trans &kp RGUI
               &trans &kp BSLH                                   &trans &kp RALT
             >;
