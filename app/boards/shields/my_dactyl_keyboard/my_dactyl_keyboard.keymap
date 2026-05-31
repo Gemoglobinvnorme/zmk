@@ -251,10 +251,10 @@
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RSHFT
 &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &kp RCTRL
-              &trans &trans                                     &trans &trans
+              &kp MINUS &kp INS                                 &trans &kp SQT
               &trans &trans                                     &trans &trans
               &trans &trans                                     &trans &kp RGUI
-              &trans &trans                                     &trans &kp RALT
+              &trans &kp BSLH                                   &trans &kp RALT
             >;
         };
 
@@ -322,7 +322,7 @@
 &trans &kp C_AL_CALC &trans &trans &trans &trans       &kp PG_UP &kp LEFT  &kp DOWN &kp RIGHT &trans &dm DM_STP 0
 &trans &kp K_CMENU &trans &trans &trans &trans         &kp PG_DN &volume_down &volume_up &trans &dm DM_PLY 0 &dm DM_REC 0
               &trans &trans                                     &lang_ch LANG_RU LC(LS(N0)) &lang_ch LANG_EN LC(LS(N1))
-              &mo MAIN_LOWER &trans                             &trans &trans
+              &trans &trans                                     &trans &trans
               &trans &trans                                     &trans &trans
               &trans &kp F24                                    &trans &trans
             >;
@@ -429,8 +429,8 @@
         dcs_lower_layer {
             bindings = <
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp SQT
-&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp BSLH
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp KP_COMMA &kp RSHFT
 &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp KP_ENTER &kp RCTRL
               &trans &trans                                           &trans &trans
