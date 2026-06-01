@@ -431,8 +431,8 @@
 &trans  &trans    &trans      &trans      &trans      &trans                    &trans &trans &trans &trans   &trans &trans
 &trans  &trans    &trans      &trans      &trans      &trans                    &trans &trans &trans &trans   &trans &trans
 &kp INS &kp MINUS &hidiokp 7  &hidiokp 8  &hidiokp 9  &trans                    &trans &trans &trans &trans   &trans &trans
-&trans  &kp SQT   &hidiokp 10 &hidiokp 11 &hidiokp 12 &trans                    &trans &trans &trans &trans   &trans &kp RSHFT
-&trans  &kp EQUAL &hidiokp 13 &hidiokp 14 &hidiokp 15 &trans                    &trans &trans &trans &trans   &trans &kp RCTRL
+&trans  &kp SQT   &hidiokp 10 &hidiokp 11 &hidiokp 12 &trans                    &trans &trans &trans &trans   &kp KP_COMMA &kp RSHFT
+&trans  &kp EQUAL &hidiokp 13 &hidiokp 14 &hidiokp 15 &trans                    &trans &trans &trans &trans   &kp KP_ENTER &kp RCTRL
                   &hidiokp 1  &hidiokp 2                                                      &trans &trans
                   &trans      &trans                                                          &trans &trans
                   &trans      &trans                                                          &trans &kp RGUI
