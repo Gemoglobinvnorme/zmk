@@ -446,7 +446,7 @@
 &trans &trans &trans      &trans      &trans      &trans                    &trans &trans &trans     &trans     &trans &trans
 &trans &trans &hidiokp 16 &hidiokp 17 &hidiokp 18 &trans                    &trans &trans &trans     &trans     &trans &trans
 &trans &trans &hidiokp 19 &hidiokp 20 &hidiokp 21 &trans                    &trans &trans &trans     &trans     &trans &kp RSHFT
-&trans &trans &hidiokp 22 &hidiokp 23 &hidiokp 24 &trans                    &trans &trans &trans     &trans     &trans &kp RCTRL
+&trans &trans &hidiokp 22 &hidiokp 23 &hidiokp 24 &trans                    &trans &hidiokp 5 &hidiokp 6     &trans     &trans &kp RCTRL
               &hidiokp 1  &hidiokp 2                                                      &hidiokp 3 &hidiokp 4
               &trans      &trans                                                          &trans     &trans
               &trans      &trans                                                          &trans     &kp RGUI
