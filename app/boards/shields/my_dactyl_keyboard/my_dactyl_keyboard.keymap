@@ -428,9 +428,9 @@
 
         dcs_lower_layer {
             bindings = <
-&trans  &trans    &trans      &trans      &trans      &trans                    &trans &trans &trans &trans   &trans &trans
-&trans  &trans    &trans      &trans      &trans      &trans                    &trans &trans &trans &trans   &trans &trans
-&kp INS &kp MINUS &hidiokp 7  &hidiokp 8  &hidiokp 9  &trans                    &trans &trans &trans &trans   &trans &trans
+&trans  &trans    &trans      &trans      &trans      &trans                    &trans &trans &trans &trans   &trans       &trans
+&trans  &trans    &trans      &trans      &trans      &trans                    &trans &trans &trans &trans   &trans       &trans
+&kp INS &kp MINUS &hidiokp 7  &hidiokp 8  &hidiokp 9  &trans                    &trans &trans &trans &trans   &trans       &trans
 &trans  &kp SQT   &hidiokp 10 &hidiokp 11 &hidiokp 12 &trans                    &trans &trans &trans &trans   &kp KP_COMMA &kp RSHFT
 &trans  &kp EQUAL &hidiokp 13 &hidiokp 14 &hidiokp 15 &trans                    &trans &trans &trans &trans   &kp KP_ENTER &kp RCTRL
                   &hidiokp 1  &hidiokp 2                                                      &trans &trans
@@ -442,15 +442,15 @@
 
         dcs_raise_layer {
             bindings = <
-&trans &trans &trans      &trans      &trans      &trans                    &trans &trans &trans     &trans     &trans &trans
-&trans &trans &trans      &trans      &trans      &trans                    &trans &trans &trans     &trans     &trans &trans
-&trans &trans &hidiokp 16 &hidiokp 17 &hidiokp 18 &trans                    &trans &trans &trans     &trans     &trans &trans
-&trans &trans &hidiokp 19 &hidiokp 20 &hidiokp 21 &trans                    &trans &trans &trans     &trans     &trans &kp RSHFT
-&trans &trans &hidiokp 22 &hidiokp 23 &hidiokp 24 &trans                    &trans &hidiokp 5 &hidiokp 6     &trans     &trans &kp RCTRL
-              &hidiokp 1  &hidiokp 2                                                      &hidiokp 3 &hidiokp 4
-              &trans      &trans                                                          &trans     &trans
-              &trans      &trans                                                          &trans     &kp RGUI
-              &trans      &trans                                                          &trans     &kp RALT
+&trans &trans &trans      &trans      &trans      &trans                    &trans &trans     &trans     &trans     &trans &trans
+&trans &trans &trans      &trans      &trans      &trans                    &trans &trans     &trans     &trans     &trans &trans
+&trans &trans &hidiokp 16 &hidiokp 17 &hidiokp 18 &trans                    &trans &trans     &trans     &trans     &trans &trans
+&trans &trans &hidiokp 19 &hidiokp 20 &hidiokp 21 &trans                    &trans &trans     &trans     &trans     &trans &kp RSHFT
+&trans &trans &hidiokp 22 &hidiokp 23 &hidiokp 24 &trans                    &trans &hidiokp 5 &hidiokp 6 &trans     &trans &kp RCTRL
+              &hidiokp 1  &hidiokp 2                                                          &hidiokp 3 &hidiokp 4
+              &trans      &trans                                                              &trans     &trans
+              &trans      &trans                                                              &trans     &kp RGUI
+              &trans      &trans                                                              &trans     &kp RALT
             >;
         };
 
