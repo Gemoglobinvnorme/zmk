@@ -37,5 +37,9 @@ manifest:
       revision: 6cb4c283e76209d59c45fbcb218800cd19e9339d
       path: modules/msgs/zmk-studio-messages
       remote: zmkfirmware
+    - name: zmk-joy
+      remote: git@github.com:Gemoglobinvnorme/zmk-joy.git
+      revision: master
+      path: modules/lib/zmk-joy
   self:
     west-commands: scripts/west-commands.yml
