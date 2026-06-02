@@ -38,7 +38,7 @@ manifest:
       path: modules/msgs/zmk-studio-messages
       remote: zmkfirmware
     - name: zmk-joy
-      remote: git@github.com:Gemoglobinvnorme/zmk-joy.git
+      url: https://github.com/Gemoglobinvnorme/zmk-joy.git
       revision: master
       path: modules/lib/zmk-joy
   self:
