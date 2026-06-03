@@ -560,7 +560,7 @@
 &hidiokp 8  &hidiokp 9  &hidiokp 10 &hidiokp 11 &hidiokp 12 &hidiokp 13                    &trans &trans &trans &trans &trans &trans
 &hidiokp 14 &hidiokp 15 &hidiokp 16 &hidiokp 17 &hidiokp 18 &hidiokp 19                    &trans &trans &trans &trans &trans &trans
 &trans      &hidiokp 20 &hidiokp 21 &hidiokp 22 &hidiokp 23 &hidiokp 24                    &trans &trans &trans &trans &trans &trans
-&trans      &hidiokp 27 &hidiokp 26 &hidiokp 27 &hidiokp 28 &hidiokp 29                    &trans &trans &trans &trans &trans &trans
+&trans      &hidiokp 25 &hidiokp 26 &hidiokp 27 &hidiokp 28 &hidiokp 29                    &trans &trans &trans &trans &trans &trans
                         &hidiokp 30 &hidiokp 31                                                          &trans &trans
                         &trans      &trans                                                               &trans &trans
                         &trans      &trans                                                               &trans &trans
