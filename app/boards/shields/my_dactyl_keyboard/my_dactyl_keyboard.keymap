@@ -237,10 +237,10 @@
                 = <&macro_param_1to1>
                 , <&macro_press &mo MACRO_PLACEHOLDER>
                 , <&macro_param_2to1>
-                , <&macro_tap &kt_off MACRO_PLACEHOLDER>
+                , <&macro_tap &tog_off MACRO_PLACEHOLDER>
                 , <&macro_pause_for_release>
                 , <&macro_param_2to1>
-                , <&macro_tap &kt_off MACRO_PLACEHOLDER>
+                , <&macro_tap &tog_off MACRO_PLACEHOLDER>
                 , <&macro_param_1to1>
                 , <&macro_release &mo MACRO_PLACEHOLDER>
                 ;
@@ -332,15 +332,15 @@
 
         dcs_layer {
             bindings = <
-&trans &trans &trans           &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &trans
-&trans &trans &trans           &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &trans
-&trans &trans &trans           &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &trans
-&trans &trans &trans           &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &kp RSHFT
-&trans &trans &trans           &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &kp RCTRL
-              &hidlm DCS_TWO 1 &hidlm DCS_ONE 0                                                &hidlm DCS_ONE 0 &hidlm DCS_TWO 1
-              &mo LOWER_DCS    &trans                                                          &trans           &mo RAISE_DCS
-              &trans           &trans                                                          &trans           &kp RGUI
-              &trans           &kp EQUAL                                                       &trans           &kp RALT
+&trans &trans &trans                      &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &trans
+&trans &trans &trans                      &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &trans
+&trans &trans &trans                      &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &trans
+&trans &trans &trans                      &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &kp RSHFT
+&trans &trans &trans                      &trans           &trans &trans                    &trans &trans &trans           &trans           &trans &kp RCTRL
+              &hidlm DCS_TWO 1            &hidlm DCS_ONE 0                                                &hidlm DCS_ONE 0 &hidlm DCS_TWO 1
+              &ph LOWER_DCS LOWER_DCS_ONE &trans                                                          &trans           &mo RAISE_DCS
+              &trans                      &trans                                                          &trans           &kp RGUI
+              &trans                      &kp EQUAL                                                       &trans           &kp RALT
             >;
         };
 
@@ -542,15 +542,15 @@
 
         dcs_lower_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans   &trans       &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans   &trans       &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans   &trans       &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans   &kp KP_COMMA &kp RSHFT
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans   &kp KP_ENTER &kp RCTRL
-              &trans &trans                                                &trans &trans
-              &trans &trans                                                &trans &trans
-              &trans &trans                                                &trans &kp RGUI
-              &trans &trans                                                &trans &kp RALT
+&trans &trans &trans &trans                &trans &trans                    &trans &trans &trans &trans   &trans       &trans
+&trans &trans &trans &trans                &trans &trans                    &trans &trans &trans &trans   &trans       &trans
+&trans &trans &trans &trans                &trans &trans                    &trans &trans &trans &trans   &trans       &trans
+&trans &trans &trans &trans                &trans &trans                    &trans &trans &trans &trans   &kp KP_COMMA &kp RSHFT
+&trans &trans &trans &trans                &trans &trans                    &trans &trans &trans &trans   &kp KP_ENTER &kp RCTRL
+              &trans &tog_on LOWER_DCS_ONE                                                &trans &trans
+              &trans &trans                                                               &trans &trans
+              &trans &trans                                                               &trans &kp RGUI
+              &trans &trans                                                               &trans &kp RALT
             >;
         };
 
