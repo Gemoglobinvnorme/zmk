@@ -561,7 +561,7 @@
 
         dcs_raise_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans    &lc_dcs  RAISE_LOWER_DCS_CS &lc_dcs RAISE_LOWER_DCS_CS &lc_dcs RAISE_LOWER_DCS
+&trans &trans &trans &trans &trans &trans                    &trans &trans &trans    &lc_dcs  RAISE_LOWER_DCS_GA &lc_dcs RAISE_LOWER_DCS_CS &lc_dcs RAISE_LOWER_DCS
 &trans &trans &trans &trans &trans &trans                    &trans &trans &trans    &trans                      &trans                     &trans
 &trans &trans &trans &trans &trans &trans                    &trans &trans &trans    &trans                      &trans                     &trans
 &trans &trans &trans &trans &trans &trans                    &trans &trans &trans    &trans                      &trans                     &kp RSHFT
