@@ -259,8 +259,8 @@
         };
         hidm: hidm {
               compatible = "zmk,behavior-macro-two-param";
-              wait-ms = <0>;
-              tap-ms = <0>;
+              wait-ms = <20>;
+              tap-ms = <20>;
               #binding-cells = <2>;
               bindings
                   = <&macro_param_1to1>
