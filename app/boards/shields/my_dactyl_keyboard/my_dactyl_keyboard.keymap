@@ -627,15 +627,15 @@
 
         adjust_layer {
             bindings = <
-&none        &none       &none      &bt BT_DISC 2 &none    &none                       &none    &none    &none       &none      &none    &none
-&out OUT_BLE &sw_bl1     &sw_bl2    &sw_bl 2      &sw_bl 3 &sw_bl 4                    &sw_bl 5 &sw_bl 6 &sw_bl 7    &sw_bl 8   &sw_bl 9 &out OUT_USB
-&none        &none       &none      &none         &none    &none                       &none    &none    &none       &none      &none    &none
-&to ANDROID  &to DCS     &to CS2    &none         &none    &none                       &none    &none    &none       &none      &none    &none
-&to BASE     &to SHOOTER &to PUBG   &none         &none    &none                       &none    &none    &none       &none      &none    &bt BT_CLR
-                         &none      &none                                                                &none       &none
-                         &none      &none                                                                &none       &none
-                         &none      &none                                                                &none       &none
-                         &sys_reset &bootloader                                                          &bootloader &sys_reset
+&none        &none         &none         &bt BT_DISC 2 &none         &none                            &none         &none         &none         &none         &none         &none
+&out OUT_BLE &sw_bl1       &sw_bl2       &sw_bl 2      &sw_bl 3      &sw_bl 4                         &sw_bl 5      &sw_bl 6      &sw_bl 7      &sw_bl 8      &sw_bl 9      &out OUT_USB
+&none        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                    &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7 &bt BT_DISC 8 &bt BT_DISC 9 &none
+&to ANDROID  &to DCS       &to CS2       &none         &none         &none                            &none         &none         &none         &none         &none         &none
+&to BASE     &to SHOOTER   &to PUBG      &none         &none         &none                            &none         &none         &none         &none         &none         &bt BT_CLR
+                           &none         &none                                                                                    &none         &none
+                           &none         &none                                                                                    &none         &none
+                           &none         &none                                                                                    &none         &none
+                           &sys_reset    &bootloader                                                                              &bootloader   &sys_reset
             >;
         };
     };
