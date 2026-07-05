@@ -124,7 +124,7 @@
 &kp TAB   &kp Q &kp W &kp E &kp R &kp T                                          &kp Y &kp U &kp I     &kp O   &kp P    &kp LBKT
 &kp LSHFT &kp A &kp S &kp D &kp F &kp G                                          &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
 &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp C_MUTE                    &kp KP_NUM &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                 &kp LGUI    &kp LALT &mo MAIN_LOWER &kp SPACE         &kp DEL    &kp RET &kp BSPC &mo MAIN_RAISE &kp RALT &kp INS
+                 &kp LGUI    &kp LALT    &mo MAIN_LOWER                &kp SPACE  &kp DEL &kp RET &kp BSPC &mo MAIN_RAISE &kp RALT &kp INS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
@@ -216,7 +216,7 @@
 &kp DEL &kp Y &trans &kp I &kp O     &kp P                                    &trans &trans &trans &trans &trans &trans
 &kp H  &trans &trans &trans &kp L    &kp PG_DN                                &trans &trans &trans &trans &trans &trans
 &trans &kp N &kp M &kp END &kp PG_UP &kp INS &trans                    &trans &trans &trans &trans &trans &trans &trans
-                &kp LALT      &kp KP_MULTIPLY &kp KP_DIVIDE &kp HOME      &none  &trans &trans &trans &trans &trans
+                &kp LALT      &kp KP_MULTIPLY   &kp KP_DIVIDE             &kp HOME &none &trans &trans &trans &trans &trans
             >;
         };
 
@@ -227,7 +227,7 @@
 &kp Y &kp U &kp I     &kp O   &kp P    &kp RBKT                                 &trans &trans &trans &trans &trans &trans
 &kp H &kp J &kp K     &kp L   &kp SEMI &kp LBKT                                 &trans &trans &trans &trans &trans &trans
 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RET &trans                    &trans &trans &trans &trans &trans &trans &trans
-                &kp HOME  &kp END &trans   &kp PG_UP &kp PG_DN                      &trans &trans &trans &trans &trans
+                &kp HOME  &kp END &trans   &kp PG_UP &kp PG_DN                             &trans &trans &trans &trans &trans
             >;
         };
 
