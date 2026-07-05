@@ -145,7 +145,7 @@ menuconfig ZMK_BLE
     bool "BLE (HID over GATT)"
     select BT
     select BT_SMP
-    select BT_SMP_SC_PAIR_ONLY
+    select BT_SMP_SC_PAIR_ONLY if !ZMK_BLE_LEGACY_PAIRING
     select BT_SMP_APP_PAIRING_ACCEPT
     select BT_PERIPHERAL
     select BT_DIS
@@ -155,6 +155,13 @@ menuconfig ZMK_BLE
     imply ZMK_BATTERY_REPORTING if !ARCH_POSIX
 
 if ZMK_BLE
+
+config ZMK_BLE_LEGACY_PAIRING
+    bool "Allow legacy BLE pairing"
+    help
+      Allows pairing with central devices that do not support LE Secure
+      Connections. This reduces BLE pairing security and should only be used
+      for compatibility testing with legacy hosts.
 
 config ZMK_BLE_EXPERIMENTAL_CONN
     bool "Experimental BLE connection changes"
