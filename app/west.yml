@@ -1,34 +1,46 @@
 manifest:
   remotes:
+    - name: nrfconnect
+      url-base: https://github.com/nrfconnect
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
   projects:
+    # NCS 2.6.1 base required by Nordic's Zigbee/ZBOSS stack.
     - name: zephyr
-      remote: zmkfirmware
-      revision: v3.5.0+zmk-fixes
-      clone-depth: 1
+      remote: nrfconnect
+      repo-path: sdk-zephyr
+      revision: v3.5.99-ncs1-1
       import:
-        name-blocklist:
-          - ci-tools
-          - hal_altera
-          - hal_cypress
-          - hal_infineon
-          - hal_microchip
-          - hal_nxp
-          - hal_openisa
-          - hal_silabs
-          - hal_xtensa
-          - hal_st
-          - hal_ti
-          - loramac-node
-          - mcuboot
-          - mcumgr
-          - net-tools
-          - openthread
-          - edtt
-          - trusted-firmware-m
+        name-allowlist:
+          - cmsis
+          - fatfs
+          - hal_nordic
+          - littlefs
+          - lvgl
+          - nanopb
+          - segger
+          - tinycrypt
+          - zcbor
+    - name: nrf
+      remote: nrfconnect
+      repo-path: sdk-nrf
+      path: nrf
+      revision: v2.6.1
+      import: false
+    - name: nrfxlib
+      remote: nrfconnect
+      repo-path: sdk-nrfxlib
+      path: nrfxlib
+      revision: v2.6.1
+      import: false
+    - name: mbedtls
+      remote: nrfconnect
+      repo-path: sdk-mbedtls
+      path: modules/crypto/mbedtls
+      revision: v3.5.2-ncs1-1
+      import: false
     - name: nanopb
       revision: 8c60555d6277a0360c876bd85d491fc4fb0cd74a
       path: modules/lib/nanopb
@@ -41,5 +53,9 @@ manifest:
       url: https://github.com/Gemoglobinvnorme/zmk-joy.git
       revision: master
       path: modules/lib/zmk-joy
+    - name: zmk-zigbee
+      url: git@github.com:Gemoglobinvnorme/zmk-zigbee.git
+      revision: master
+      path: modules/lib/zmk-zigbee
   self:
     west-commands: scripts/west-commands.yml
