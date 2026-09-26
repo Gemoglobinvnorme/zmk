@@ -54,7 +54,7 @@ manifest:
       revision: master
       path: modules/lib/zmk-joy
     - name: zmk-zigbee
-      url: git@github.com:Gemoglobinvnorme/zmk-zigbee.git
+      url: https://github.com/Gemoglobinvnorme/zmk-zigbee.git
       revision: master
       path: modules/lib/zmk-zigbee
   self:

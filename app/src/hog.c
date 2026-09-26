@@ -108,6 +108,10 @@ static ssize_t read_hids_report_ref(struct bt_conn *conn, const struct bt_gatt_a
 
 static ssize_t read_hids_report_map(struct bt_conn *conn, const struct bt_gatt_attr *attr,
                                     void *buf, uint16_t len, uint16_t offset) {
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+    LOG_INF("Dactyl debug: HOG report map read for profile %d",
+            zmk_ble_profile_index(bt_conn_get_dst(conn)));
+#endif
     return bt_gatt_attr_read(conn, attr, buf, len, offset, zmk_hid_report_desc,
                              sizeof(zmk_hid_report_desc));
 }
@@ -233,6 +237,9 @@ static ssize_t write_hids_mouse_feature_report(struct bt_conn *conn,
 
 static void input_ccc_changed(const struct bt_gatt_attr *attr, uint16_t value) {
     host_requests_notification = (value == BT_GATT_CCC_NOTIFY) ? 1 : 0;
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+    LOG_INF("Dactyl debug: HOG CCC handle %u changed to 0x%04x", attr->handle, value);
+#endif
 }
 
 static ssize_t write_ctrl_point(struct bt_conn *conn, const struct bt_gatt_attr *attr,
@@ -312,7 +319,13 @@ void send_keyboard_report_callback(struct k_work *work) {
 
     while (k_msgq_get(&zmk_hog_keyboard_msgq, &report, K_NO_WAIT) == 0) {
         struct bt_conn *conn = zmk_ble_active_profile_conn();
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+        int active_profile = zmk_ble_active_profile_index();
+#endif
         if (conn == NULL) {
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+            LOG_INF("Dactyl debug: HOG keyboard profile %d is not connected", active_profile);
+#endif
             return;
         }
 
@@ -323,6 +336,9 @@ void send_keyboard_report_callback(struct k_work *work) {
         };
 
         int err = bt_gatt_notify_cb(conn, &notify_params);
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+        LOG_INF("Dactyl debug: HOG keyboard notify profile %d result %d", active_profile, err);
+#endif
         if (err == -EPERM) {
             bt_conn_set_security(conn, BT_SECURITY_L2);
         } else if (err) {
