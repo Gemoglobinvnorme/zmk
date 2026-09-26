@@ -292,9 +292,15 @@ int zmk_ble_prof_select(uint8_t index) {
 
     LOG_DBG("profile %d", index);
     if (active_profile == index) {
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+        LOG_INF("Dactyl debug: active BLE profile remains %d", index);
+#endif
         return 0;
     }
 
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+    LOG_INF("Dactyl debug: active BLE profile %d -> %d", active_profile, index);
+#endif
     active_profile = index;
     ble_save_profile();
 

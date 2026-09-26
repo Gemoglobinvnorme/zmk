@@ -99,6 +99,9 @@ static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
     case BT_PRV_CMD:
         return zmk_ble_prof_prev();
     case BT_SEL_CMD:
+#if IS_ENABLED(CONFIG_ZMK_USB_LOGGING)
+        LOG_INF("Dactyl debug: BT_SEL requested profile %d", binding->param2);
+#endif
         return zmk_ble_prof_select(binding->param2);
     case BT_CLR_ALL_CMD:
         zmk_ble_clear_all_bonds();

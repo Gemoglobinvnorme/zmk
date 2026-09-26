@@ -143,6 +143,16 @@
             display-name = "Key Toggle On";
             toggle-mode = "on";
         };
+        z2m: z2m {
+            compatible = "zmk,behavior-zigbee-command";
+            #binding-cells = <1>;
+            display-name = "Zigbee command";
+        };
+        z2m_on: z2m_on {
+            compatible = "zmk,behavior-zigbee-start";
+            #binding-cells = <0>;
+            display-name = "Start Zigbee";
+        };
     };
 
     macros {
@@ -668,8 +678,8 @@
 &none        &none         &none         &bt BT_DISC 2 &none         &none                            &none         &none         &none         &none         &none         &none
 &out OUT_BLE &sw_bl1       &sw_bl2       &sw_bl 2      &sw_bl 3      &sw_bl 4                         &sw_bl 5      &sw_bl 6      &sw_bl 7      &sw_bl 8      &sw_bl 9      &out OUT_USB
 &none        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                    &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7 &bt BT_DISC 8 &bt BT_DISC 9 &none
-&to ANDROID  &to DCS       &to CS2       &none         &none         &none                            &none         &none         &none         &none         &none         &none
-&to BASE     &to SHOOTER   &to PUBG      &none         &none         &none                            &none         &none         &none         &none         &none         &bt BT_CLR
+&to ANDROID  &to DCS       &to CS2       &to SC2       &none         &none                            &z2m 0        &z2m 1         &z2m 2         &none         &none         &none
+&to BASE     &to SHOOTER   &to PUBG      &none         &none         &none                            &z2m 255      &none          &none         &none         &none         &bt BT_CLR
                            &none         &none                                                                                    &none         &none
                            &none         &none                                                                                    &none         &none
                            &none         &none                                                                                    &none         &none

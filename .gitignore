@@ -3,6 +3,8 @@
 /modules
 /tools
 /zephyr
+/nrf
+/nrfxlib
 /zmk-config
 /build
 
