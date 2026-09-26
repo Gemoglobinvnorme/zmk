@@ -283,15 +283,15 @@
 
         default_layer {
             bindings = <
-&kp ESC   &kp F1 &kp F2                      &kp F3                      &kp F4 &kp F5                    &kp F6 &kp F7 &kp F8    &kp F9         &kp F10  &kp F11
-&kp GRAVE &kp N1 &kp N2                      &kp N3                      &kp N4 &kp N5                    &kp N6 &kp N7 &kp N8    &kp N9         &kp N0   &kp RBKT
-&kp TAB   &kp Q  &kp W                       &kp E                       &kp R  &kp T                     &kp Y  &kp U  &kp I     &kp O          &kp P    &kp LBKT
-&kp LSHFT &kp A  &kp S                       &kp D                       &kp F  &kp G                     &kp H  &kp J  &kp K     &kp L          &kp SEMI &kp SQT
-&kp LCTRL &kp Z  &kp X                       &kp C                       &kp V  &kp B                     &kp N  &kp M  &kp COMMA &kp DOT        &kp FSLH &kp BSLH
-                 &lang_ch LANG_EN LANG1 &lang_ch LANG_RU LANG2                                                          &kp EQUAL &kp GT
-                 &mo MAIN_LOWER              &kp SPACE                                                                  &kp BSPC  &mo MAIN_RAISE
-                 &kp LGUI                    &kp DEL                                                                    &kp RET   &kp MINUS
-                 &kp LALT                    &kp LC(Y)                                                                  &kp F12   &kp INS
+&kp ESC   &kp F1 &kp F2                 &kp F3                 &kp F4 &kp F5                    &kp F6 &kp F7 &kp F8    &kp F9         &kp F10  &kp F11
+&kp GRAVE &kp N1 &kp N2                 &kp N3                 &kp N4 &kp N5                    &kp N6 &kp N7 &kp N8    &kp N9         &kp N0   &kp RBKT
+&kp TAB   &kp Q  &kp W                  &kp E                  &kp R  &kp T                     &kp Y  &kp U  &kp I     &kp O          &kp P    &kp LBKT
+&kp LSHFT &kp A  &kp S                  &kp D                  &kp F  &kp G                     &kp H  &kp J  &kp K     &kp L          &kp SEMI &kp SQT
+&kp LCTRL &kp Z  &kp X                  &kp C                  &kp V  &kp B                     &kp N  &kp M  &kp COMMA &kp DOT        &kp FSLH &kp BSLH
+                 &lang_ch LANG_EN LANG1 &lang_ch LANG_RU LANG2                                                &kp EQUAL &kp GT
+                 &mo MAIN_LOWER         &kp SPACE                                                             &kp BSPC  &mo MAIN_RAISE
+                 &kp LGUI               &kp DEL                                                               &kp RET   &kp MINUS
+                 &kp LALT               &kp LC(Y)                                                             &kp F12   &kp INS
             >;
         };
 
@@ -409,15 +409,15 @@
 
         base_raise_layer {
             bindings = <
-&trans   &kp F13       &kp F14 &kp F15 &kp F16 &kp F17                    &kp F18         &kp F19      &kp F20                     &kp F21                     &kp F22      &kp F23
-&trans   &trans        &trans  &trans  &trans  &trans                     &kp PAUSE_BREAK &trans       &trans                      &trans                      &trans       &trans
-&kp CAPS &kp PSCRN     &trans  &trans  &trans  &trans                     &kp SCROLLLOCK  &kp HOME     &kp UP                      &kp END                     &trans       &trans
-&trans   &kp C_AL_CALC &trans  &trans  &trans  &trans                     &kp PG_UP       &kp LEFT     &kp DOWN                    &kp RIGHT                   &trans       &dm DM_STP 0
-&trans   &kp K_CMENU   &trans  &trans  &trans  &trans                     &kp PG_DN       &volume_down &volume_up                  &trans                      &dm DM_PLY 0 &dm DM_REC 0
+&trans   &kp F13       &kp F14 &kp F15 &kp F16 &kp F17                    &kp F18         &kp F19      &kp F20                &kp F21                &kp F22      &kp F23
+&trans   &trans        &trans  &trans  &trans  &trans                     &kp PAUSE_BREAK &trans       &trans                 &trans                 &trans       &trans
+&kp CAPS &kp PSCRN     &trans  &trans  &trans  &trans                     &kp SCROLLLOCK  &kp HOME     &kp UP                 &kp END                &trans       &trans
+&trans   &kp C_AL_CALC &trans  &trans  &trans  &trans                     &kp PG_UP       &kp LEFT     &kp DOWN               &kp RIGHT              &trans       &dm DM_STP 0
+&trans   &kp K_CMENU   &trans  &trans  &trans  &trans                     &kp PG_DN       &volume_down &volume_up             &trans                 &dm DM_PLY 0 &dm DM_REC 0
                        &trans  &trans                                                                  &lang_ch LANG_RU LANG2 &lang_ch LANG_EN LANG1
-                       &trans  &trans                                                                  &trans                      &trans
-                       &trans  &trans                                                                  &trans                      &trans
-                       &trans  &kp F24                                                                 &trans                      &trans
+                       &trans  &trans                                                                  &trans                 &trans
+                       &trans  &trans                                                                  &trans                 &trans
+                       &trans  &kp F24                                                                 &trans                 &trans
             >;
         };
 
@@ -647,29 +647,29 @@
 
         sc2_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
-              &kp BSPC      &kp RET                                                 &trans &trans
-              &mo SC2_LOWER &trans                                                  &trans &trans
-              &kp HOME      &trans                                                  &trans &trans
-              &trans        &kp END                                                 &trans &trans
+&trans &trans &trans        &trans  &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans        &trans  &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans        &trans  &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans        &trans  &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans        &trans  &trans &trans                    &trans &trans &trans &trans &trans &trans
+              &kp BSPC      &kp RET                                                &trans &trans
+              &mo SC2_LOWER &trans                                                 &trans &trans
+              &kp HOME      &trans                                                 &trans &trans
+              &trans        &kp END                                                &trans &trans
             >;
         };
 
         sc2_lower_layer {
             bindings = <
-&kp F6 &kp F7 &kp F8    &kp F9       &kp F10  &kp F11                    &trans &trans &trans &trans &trans &trans
-&kp N6 &kp N7 &kp N8    &kp N9       &kp N0   &kp RBKT                   &trans &trans &trans &trans &trans &trans
-&kp Y  &kp U  &kp I     &kp O        &kp P    &kp LBKT                   &trans &trans &trans &trans &trans &trans
-&&kp LSHFT &kp H  &kp J  &kp K     &kp L      &kp SEMI                 &trans &trans &trans &trans &trans &trans
-&&kp LCTRL &kp N  &kp M  &kp COMMA &kp DOT    &kp FSLH                 &trans &trans &trans &trans &trans &trans
-              &kp PG_DN &kp PG_UP                                                              &trans &trans
-              &trans    &kp KP_MINUS                                                           &trans &trans
-              &kp MINUS &kp KP_PLUS                                                            &trans &trans
-              &kp INS   &kp F12                                                                &trans &trans
+&kp F6    &kp F7 &kp F8    &kp F9       &kp F10 &kp F11                     &trans &trans &trans &trans &trans &trans
+&kp N6    &kp N7 &kp N8    &kp N9       &kp N0  &kp RBKT                    &trans &trans &trans &trans &trans &trans
+&kp Y     &kp U  &kp I     &kp O        &kp P   &kp LBKT                    &trans &trans &trans &trans &trans &trans
+&kp LSHFT &kp H  &kp J     &kp K        &kp L   &kp SEMI                    &trans &trans &trans &trans &trans &trans
+&kp LCTRL &kp N  &kp M     &kp COMMA    &kp DOT &kp FSLH                    &trans &trans &trans &trans &trans &trans
+                 &kp PG_DN &kp PG_UP                                                      &trans &trans
+                 &trans    &kp KP_MINUS                                                   &trans &trans
+                 &kp MINUS &kp KP_PLUS                                                    &trans &trans
+                 &kp INS   &kp F12                                                        &trans &trans
             >;
         };
 
@@ -678,8 +678,8 @@
 &none        &none         &none         &bt BT_DISC 2 &none         &none                            &none         &none         &none         &none         &none         &none
 &out OUT_BLE &sw_bl1       &sw_bl2       &sw_bl 2      &sw_bl 3      &sw_bl 4                         &sw_bl 5      &sw_bl 6      &sw_bl 7      &sw_bl 8      &sw_bl 9      &out OUT_USB
 &none        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                    &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7 &bt BT_DISC 8 &bt BT_DISC 9 &none
-&to ANDROID  &to DCS       &to CS2       &to SC2       &none         &none                            &z2m 0        &z2m 1         &z2m 2         &none         &none         &none
-&to BASE     &to SHOOTER   &to PUBG      &none         &none         &none                            &z2m 255      &none          &none         &none         &none         &bt BT_CLR
+&to ANDROID  &to DCS       &to CS2       &to SC2       &none         &none                            &z2m 0        &z2m 1        &z2m 2        &none         &none         &none
+&to BASE     &to SHOOTER   &to PUBG      &none         &none         &none                            &z2m 255      &none         &none         &none         &none         &bt BT_CLR
                            &none         &none                                                                                    &none         &none
                            &none         &none                                                                                    &none         &none
                            &none         &none                                                                                    &none         &none
