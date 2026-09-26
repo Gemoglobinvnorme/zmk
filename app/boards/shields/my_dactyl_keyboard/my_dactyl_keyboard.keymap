@@ -45,7 +45,9 @@
 #define RAISE_LOWER_DCS_SHFT  23
 #define RAISE_LOWER_DCS_CS    24
 #define RAISE_LOWER_DCS_GA    25
-#define ADJUST                26
+#define SC2                   26
+#define SC2_LOWER             27
+#define ADJUST                28
 
 / {
     conditional_layers {
@@ -81,6 +83,14 @@
         android_lower_layer {
             if-layers = <ANDROID_LOWER>;
             then-layer = <LOWER>;
+        };
+        sc2_layer {
+            if-layers = <SC2>;
+            then-layer = <BASE_SHOOTER>;
+        };
+        sc2_lower_layer {
+            if-layers = <SC2_LOWER>;
+            then-layer = <BASE_SHOOTER_LOWER>;
         };
         raise_layer {
             if-layers = <MAIN_RAISE>;
@@ -268,7 +278,7 @@
 &kp TAB   &kp Q  &kp W                       &kp E                       &kp R  &kp T                     &kp Y  &kp U  &kp I     &kp O          &kp P    &kp LBKT
 &kp LSHFT &kp A  &kp S                       &kp D                       &kp F  &kp G                     &kp H  &kp J  &kp K     &kp L          &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X                       &kp C                       &kp V  &kp B                     &kp N  &kp M  &kp COMMA &kp DOT        &kp FSLH &kp BSLH
-                 &lang_ch LANG_EN LC(LS(N1)) &lang_ch LANG_RU LC(LS(N0))                                                &kp EQUAL &kp GT
+                 &lang_ch LANG_EN LANG1 &lang_ch LANG_RU LANG2                                                          &kp EQUAL &kp GT
                  &mo MAIN_LOWER              &kp SPACE                                                                  &kp BSPC  &mo MAIN_RAISE
                  &kp LGUI                    &kp DEL                                                                    &kp RET   &kp MINUS
                  &kp LALT                    &kp LC(Y)                                                                  &kp F12   &kp INS
@@ -394,7 +404,7 @@
 &kp CAPS &kp PSCRN     &trans  &trans  &trans  &trans                     &kp SCROLLLOCK  &kp HOME     &kp UP                      &kp END                     &trans       &trans
 &trans   &kp C_AL_CALC &trans  &trans  &trans  &trans                     &kp PG_UP       &kp LEFT     &kp DOWN                    &kp RIGHT                   &trans       &dm DM_STP 0
 &trans   &kp K_CMENU   &trans  &trans  &trans  &trans                     &kp PG_DN       &volume_down &volume_up                  &trans                      &dm DM_PLY 0 &dm DM_REC 0
-                       &trans  &trans                                                                  &lang_ch LANG_RU LC(LS(N0)) &lang_ch LANG_EN LC(LS(N1))
+                       &trans  &trans                                                                  &lang_ch LANG_RU LANG2 &lang_ch LANG_EN LANG1
                        &trans  &trans                                                                  &trans                      &trans
                        &trans  &trans                                                                  &trans                      &trans
                        &trans  &kp F24                                                                 &trans                      &trans
@@ -622,6 +632,34 @@
                                                &trans            &trans                                                                                                       &trans            &trans
                                                &trans            &trans                                                                                                       &trans            &trans
                                                &trans            &trans                                                                                                       &trans            &trans
+            >;
+        };
+
+        sc2_layer {
+            bindings = <
+&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans
+              &kp BSPC      &kp RET                                                 &trans &trans
+              &mo SC2_LOWER &trans                                                  &trans &trans
+              &kp HOME      &trans                                                  &trans &trans
+              &trans        &kp END                                                 &trans &trans
+            >;
+        };
+
+        sc2_lower_layer {
+            bindings = <
+&kp F6 &kp F7 &kp F8    &kp F9       &kp F10  &kp F11                    &trans &trans &trans &trans &trans &trans
+&kp N6 &kp N7 &kp N8    &kp N9       &kp N0   &kp RBKT                   &trans &trans &trans &trans &trans &trans
+&kp Y  &kp U  &kp I     &kp O        &kp P    &kp LBKT                   &trans &trans &trans &trans &trans &trans
+&&kp LSHFT &kp H  &kp J  &kp K     &kp L      &kp SEMI                 &trans &trans &trans &trans &trans &trans
+&&kp LCTRL &kp N  &kp M  &kp COMMA &kp DOT    &kp FSLH                 &trans &trans &trans &trans &trans &trans
+              &kp PG_DN &kp PG_UP                                                              &trans &trans
+              &trans    &kp KP_MINUS                                                           &trans &trans
+              &kp MINUS &kp KP_PLUS                                                            &trans &trans
+              &kp INS   &kp F12                                                                &trans &trans
             >;
         };
 
