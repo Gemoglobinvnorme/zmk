@@ -64,6 +64,10 @@
             if-layers = <SHOOTER_LOWER RAISE>;
             then-layer = <ADJUST>;
         };
+        adjust_sc2_layer {
+            if-layers = <SC2_LOWER RAISE>;
+            then-layer = <ADJUST>;
+        };
         lower_tv_layer {
             if-layers = <TV_LOWER_LAYER>;
             then-layer = <LOWER>;
