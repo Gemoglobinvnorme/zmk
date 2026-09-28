@@ -697,7 +697,7 @@
 &kp DEL &sc2_second N1 &sc2_second N2 &sc2_second N3 &sc2_second N4 &sc2_second N5                    &trans &trans &trans &trans &trans &trans
 &kp Y   &kp U          &kp I          &kp O          &kp P          &kp LBKT                          &trans &trans &trans &trans &trans &trans
 &kp H   &kp LSHFT      &kp J          &kp K          &kp L          &kp SEMI                          &trans &trans &trans &trans &trans &trans
-&kp N  &kp LCTRL &kp M  &kp COMMA &kp DOT      &kp FSLH &kp BSLH            &trans &trans &trans &trans &trans &trans
+&kp N   &kp LCTRL      &kp M          &kp COMMA      &kp DOT        &kp FSLH                          &trans &trans &trans &trans &trans &trans
                        &sc2_second N6 &sc2_second N7                                                                &trans &trans
                        &trans         &kp KP_MINUS                                                                  &trans &trans
                        &kp LALT       &kp KP_PLUS                                                                   &trans &trans
