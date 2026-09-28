@@ -280,7 +280,7 @@
                   , <&macro_release &kp MACRO_PLACEHOLDER>
                   ;
           };
-         slm: sticky_layer_modifier {
+        slm: sticky_layer_modifier {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
 
@@ -293,6 +293,19 @@
 
                 , <&macro_param_2to1>
                 , <&sk MACRO_PLACEHOLDER>
+                ;
+        };
+        sc2_second: sc2_second {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+
+            wait-ms = <20>;
+            tap-ms = <20>;
+
+            bindings
+                = <&macro_param_1to1>
+                , <&kp MACRO_PLACEHOLDER>
+                , <&kp TAB>
                 ;
         };
     };
@@ -680,15 +693,15 @@
 
         sc2_lower_layer {
             bindings = <
-&kp F10 &kp F6    &kp F7    &kp F8       &kp F9   &kp F11                     &trans &trans &trans &trans &trans &trans
-&kp DEL &kp END   &kp HOME  &kp RET      &kp BSPC &kp RBKT                    &trans &trans &trans &trans &trans &trans
-&kp Y   &kp U     &kp I     &kp O        &kp P    &kp LBKT                    &trans &trans &trans &trans &trans &trans
-&kp H   &kp LSHFT &kp J     &kp K        &kp L    &kp SEMI                    &trans &trans &trans &trans &trans &trans
+&kp F10 &kp F6         &kp F7         &kp F8         &kp F9         &kp F11                           &trans &trans &trans &trans &trans &trans
+&kp DEL &sc2_second N1 &sc2_second N2 &sc2_second N3 &sc2_second N4 &sc2_second N5                    &trans &trans &trans &trans &trans &trans
+&kp Y   &kp U          &kp I          &kp O          &kp P          &kp LBKT                          &trans &trans &trans &trans &trans &trans
+&kp H   &kp LSHFT      &kp J          &kp K          &kp L          &kp SEMI                          &trans &trans &trans &trans &trans &trans
 &kp N  &kp LCTRL &kp M  &kp COMMA &kp DOT      &kp FSLH &kp BSLH            &trans &trans &trans &trans &trans &trans
-                  &kp PG_DN &kp PG_UP                                                       &trans &trans
-                  &trans    &kp KP_MINUS                                                    &trans &trans
-                  &kp LALT  &kp KP_PLUS                                                     &trans &trans
-                  &kp INS   &kp F12                                                         &trans &trans
+                       &sc2_second N6 &sc2_second N7                                                                &trans &trans
+                       &trans         &kp KP_MINUS                                                                  &trans &trans
+                       &kp LALT       &kp KP_PLUS                                                                   &trans &trans
+                       &kp INS        &kp F12                                                                       &trans &trans
             >;
         };
 
