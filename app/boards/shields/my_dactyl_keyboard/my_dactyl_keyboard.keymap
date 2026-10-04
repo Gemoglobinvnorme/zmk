@@ -441,7 +441,7 @@
 
         base_raise_layer {
             bindings = <
-&trans   &kp F13       &kp F14 &kp F15 &kp F16 &kp F17                    &kp F18         &kp F19      &kp F20                &kp F21                &kp F22      &kp F23
+&kp F13  &kp F14       &kp F15 &kp F16 &kp F17 &kp F18                    &kp F19         &kp F20      &kp F21                &kp F22                &kp F23      &kp F24
 &trans   &trans        &trans  &trans  &trans  &trans                     &kp PAUSE_BREAK &trans       &trans                 &trans                 &trans       &trans
 &kp CAPS &kp PSCRN     &trans  &trans  &trans  &trans                     &kp SCROLLLOCK  &kp HOME     &kp UP                 &kp END                &trans       &trans
 &trans   &kp C_AL_CALC &trans  &trans  &trans  &trans                     &kp PG_UP       &kp LEFT     &kp DOWN               &kp RIGHT              &trans       &dm DM_STP 0
@@ -449,7 +449,7 @@
                        &trans  &trans                                                                  &lang_ch LANG_RU LANG2 &lang_ch LANG_EN LANG1
                        &trans  &trans                                                                  &trans                 &trans
                        &trans  &trans                                                                  &trans                 &trans
-                       &trans  &kp F24                                                                 &trans                 &trans
+                       &trans  &trans                                                                  &trans                 &trans
             >;
         };
 
